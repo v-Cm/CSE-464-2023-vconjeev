@@ -52,4 +52,8 @@ public class GraphManager {
     public void addNodes(String[] label){
         graph.addNodes(label);
     }
+
+    public void addEdge(String srcLabel, String dstLabel) {
+        graph.addEdge(srcLabel, dstLabel);
+    }
 }

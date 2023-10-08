@@ -21,9 +21,7 @@ public class Graph {
         }
 
         for (Link edge : mutableGraph.edges()) {
-            Node src = nodes.get(edge.from().name().toString());
-            Node dst = nodes.get(edge.to().name().toString());
-            edges.putIfAbsent(Edge.edgeString(src, dst), new Edge(src, dst));
+            createEdge(edge.from().name().toString(), edge.to().name().toString());
         }
     }
 
@@ -57,6 +55,20 @@ public class Graph {
     public void addNodes(String[] labels) {
         for (String label : labels) {
             addNode(label);
+        }
+    }
+
+    private void createEdge(String srcLabel, String dstLabel) {
+        Node src = nodes.get(srcLabel);
+        Node dst = nodes.get(dstLabel);
+        edges.putIfAbsent(Edge.edgeString(src, dst), new Edge(src, dst));
+    }
+
+    public void addEdge(String srcLabel, String dstLabel) {
+        if(!edges.containsKey(Edge.edgeString(srcLabel, dstLabel))){
+            createEdge(srcLabel, dstLabel);
+        }else{
+            System.out.println("Edge already exist from " + srcLabel + " to " + dstLabel);
         }
     }
 

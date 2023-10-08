@@ -11,6 +11,9 @@ public class Edge {
         return new StringBuilder().append(src.getName()).append("->").append(dest.getName()).toString();
     }
 
+    public static String edgeString(String src, String dest){
+        return new StringBuilder().append(src).append("->").append(dest).toString();
+    }
     public String toString(){
         return src.toString() + " -> " + dest.toString();
     }

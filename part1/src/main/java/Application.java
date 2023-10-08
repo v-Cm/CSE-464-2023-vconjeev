@@ -13,6 +13,12 @@ public class Application {
         graphManager.addNodes(new String[]{"E", "A", "F"});
         graphManager.toString();
 
+        graphManager.addEdge("B", "F");
+        graphManager.toString();
+
+        graphManager.addEdge("C", "A");
+        graphManager.toString();
+
         graphManager.outputGraph("output.txt");
     }
 }
