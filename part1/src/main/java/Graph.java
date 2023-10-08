@@ -46,4 +46,18 @@ public class Graph {
         return str_build.toString();
     }
 
+    public void addNode(String label) {
+        if(!nodes.containsKey(label)){
+            nodes.put(label, new Node(label));
+        }else{
+            System.out.println("Node: " + label + " already exists! Cannot add.");
+        }
+    }
+
+    public void addNodes(String[] labels) {
+        for (String label : labels) {
+            addNode(label);
+        }
+    }
+
 }

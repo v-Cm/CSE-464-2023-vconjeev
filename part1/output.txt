@@ -1,5 +1,5 @@
-Number of Nodes: 3
-Label of Nodes: [A, B, C]
+Number of Nodes: 6
+Label of Nodes: [A, B, C, D, E, F]
 Number of Edges: 3
 Nodes and Edge Directions: 
 C -> A

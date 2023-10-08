@@ -44,4 +44,12 @@ public class GraphManager {
             e.printStackTrace();
         }
     }
+
+    public void addNode(String label){
+        graph.addNode(label);
+    }
+
+    public void addNodes(String[] label){
+        graph.addNodes(label);
+    }
 }
