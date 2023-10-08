@@ -1,8 +1,11 @@
+import guru.nidi.graphviz.engine.Format;
+import guru.nidi.graphviz.engine.Graphviz;
 import guru.nidi.graphviz.model.MutableGraph;
 import guru.nidi.graphviz.parse.Parser;
 
 import java.io.*;
 import java.nio.file.Files;
+import java.util.Objects;
 
 public class GraphManager {
     Graph graph;
@@ -55,5 +58,27 @@ public class GraphManager {
 
     public void addEdge(String srcLabel, String dstLabel) {
         graph.addEdge(srcLabel, dstLabel);
+    }
+
+    public void outputGraphics(String path, String format) throws IOException {
+        MutableGraph mutGraph = graph.convertToGraphViz();
+        Format renderFormat = null;
+
+        switch (format.toLowerCase()) {
+            case "png":
+                renderFormat = Format.PNG;
+                break;
+            case "svg":
+                renderFormat = Format.SVG;
+                break;
+            case "dot":
+                renderFormat = Format.DOT;
+                break;
+            default:
+                System.out.println("Unsupported format: " + format);
+                return;
+        }
+        Graphviz.fromGraph(mutGraph).width(900).render(renderFormat).toFile(new File(path));
+        System.out.println("Graphic output available in file: " + path);
     }
 }

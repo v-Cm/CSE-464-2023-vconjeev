@@ -1,8 +1,5 @@
-digraph MyGraph {
-    A [label="Node A", shape=ellipse, color=blue];
-    B [label="Node B", shape=box, color=red];
-    C [label="Node C", shape=diamond, color=green];
-    A -> B [label="Edge 1"];
-    B -> C [label="Edge 2"];
-    C -> A [label="Edge 3"];
+digraph {
+    A -> B;
+    B -> C;
+    C -> A;
 }

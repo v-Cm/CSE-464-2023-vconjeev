@@ -7,13 +7,14 @@ public class Edge {
         this.dest = dest;
     }
 
-    public static String edgeString(Node src, Node dest){
-        return new StringBuilder().append(src.getName()).append("->").append(dest.getName()).toString();
+    public Node getSource() {
+        return src;
     }
 
-    public static String edgeString(String src, String dest){
-        return new StringBuilder().append(src).append("->").append(dest).toString();
+    public Node getDestination() {
+        return dest;
     }
+
     public String toString(){
         return src.toString() + " -> " + dest.toString();
     }

@@ -5,6 +5,9 @@ import guru.nidi.graphviz.model.MutableNode;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static guru.nidi.graphviz.model.Factory.mutGraph;
+import static guru.nidi.graphviz.model.Factory.mutNode;
+
 public class Graph {
     private String name;
     private Map<String, Node> nodes;
@@ -26,22 +29,18 @@ public class Graph {
     }
 
     public int nodeSize(){
-        return nodes.keySet().size();
+        return nodes.size();
     }
     public int edgeSize() {
-        return edges.keySet().size();
+        return edges.size();
     }
 
     public List<String> getAllNodes() {
-        return nodes.values().stream().map(Node::getName).collect(Collectors.toList());
+        return new ArrayList<>(nodes.keySet());
     }
 
     public String toString(){
-        StringBuilder str_build = new StringBuilder();
-        for (Edge e : edges.values()){
-            str_build.append(e.toString()).append("\n");
-        }
-        return str_build.toString();
+        return edges.values().stream().map(Edge::toString).collect(Collectors.joining("\n"));
     }
 
     public void addNode(String label) {
@@ -53,23 +52,28 @@ public class Graph {
     }
 
     public void addNodes(String[] labels) {
-        for (String label : labels) {
-            addNode(label);
-        }
+        Arrays.stream(labels).forEach(this::addNode);
     }
 
     private void createEdge(String srcLabel, String dstLabel) {
         Node src = nodes.get(srcLabel);
         Node dst = nodes.get(dstLabel);
-        edges.putIfAbsent(Edge.edgeString(src, dst), new Edge(src, dst));
+        edges.putIfAbsent(srcLabel + "->" + dstLabel, new Edge(src, dst));
     }
 
     public void addEdge(String srcLabel, String dstLabel) {
-        if(!edges.containsKey(Edge.edgeString(srcLabel, dstLabel))){
+        if(!edges.containsKey(srcLabel + "->" + dstLabel)){
             createEdge(srcLabel, dstLabel);
         }else{
-            System.out.println("Edge already exist from " + srcLabel + " to " + dstLabel);
+            System.out.println("Edge already exist from " + srcLabel + " to " + dstLabel + "!");
         }
+    }
+
+    public MutableGraph convertToGraphViz(){
+        MutableGraph g = mutGraph(name).setDirected(true);
+        nodes.values().forEach(each -> g.add(mutNode(each.toString())));
+        edges.values().forEach(each -> g.add(mutNode(each.getSource().toString()).addLink(mutNode(each.getDestination().toString()))));
+        return g;
     }
 
 }

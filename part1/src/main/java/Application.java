@@ -20,5 +20,7 @@ public class Application {
         graphManager.toString();
 
         graphManager.outputGraph("output.txt");
+
+        graphManager.outputGraphics("outputGraphics.png", "png");
     }
 }
