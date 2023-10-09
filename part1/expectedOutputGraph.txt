@@ -1,0 +1,7 @@
+Number of Nodes: 3
+Label of Nodes: [A, B, C]
+Number of Edges: 3
+Nodes and Edge Directions:
+C -> A
+B -> C
+A -> B

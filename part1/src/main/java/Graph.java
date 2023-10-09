@@ -76,4 +76,11 @@ public class Graph {
         return g;
     }
 
+    public boolean containsNode(String nodeName) {
+        return nodes.containsKey(nodeName);
+    }
+
+    public boolean containsEdge(String src, String dst) {
+        return edges.containsKey(src + "->" + dst);
+    }
 }

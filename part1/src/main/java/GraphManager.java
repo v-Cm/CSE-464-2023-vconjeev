@@ -23,7 +23,7 @@ public class GraphManager {
         output.append("Number of Nodes: ").append(graph.nodeSize()).append("\n");
         output.append("Label of Nodes: ").append(graph.getAllNodes()).append("\n");
         output.append("Number of Edges: ").append(graph.edgeSize()).append("\n");
-        output.append("Nodes and Edge Directions: \n");
+        output.append("Nodes and Edge Directions:\n");
         output.append(graph.toString());
 
         if (printToConsole) {
@@ -80,5 +80,20 @@ public class GraphManager {
         }
         Graphviz.fromGraph(mutGraph).width(900).render(renderFormat).toFile(new File(path));
         System.out.println("Graphic output available in file: " + path);
+    }
+    public int nodeSize(){
+        return graph.nodeSize();
+    }
+
+    public boolean containsNode(String nodeName) {
+        return graph.containsNode(nodeName);
+    }
+
+    public int edgeSize() {
+        return graph.edgeSize();
+    }
+
+    public boolean containsEdge(String src, String dst) {
+        return graph.containsEdge(src, dst);
     }
 }

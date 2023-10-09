@@ -7,20 +7,23 @@ public class Application {
         graphManager.parseGraph("testInput.dot");
         graphManager.toString();
 
-        graphManager.addNode("D");
+        graphManager.addNode("F");
         graphManager.toString();
 
-        graphManager.addNodes(new String[]{"E", "A", "F"});
+        graphManager.addNodes(new String[]{"E", "A", "F", "G", "I"});
         graphManager.toString();
 
         graphManager.addEdge("B", "F");
+        graphManager.addEdge("D", "G");
         graphManager.toString();
 
         graphManager.addEdge("C", "A");
         graphManager.toString();
 
-        graphManager.outputGraph("output.txt");
+        graphManager.outputGraph("mainOutputGraph.txt");
 
-        graphManager.outputGraphics("outputGraphics.png", "png");
+        graphManager.outputGraphics("mainOutputGraphics.png", "png");
+        graphManager.outputGraphics("mainOutputGraphics.svg", "svg");
+        graphManager.outputGraphics("mainOutputGraphics.dot", "dot");
     }
 }
