@@ -7,6 +7,8 @@ public class Application {
         graphManager.parseGraph("testInput.dot");
         graphManager.toString();
 
+        graphManager.outputGraph("outputs/main/mainOutputGraph.txt");
+
         graphManager.addNode("F");
         graphManager.toString();
 
@@ -19,8 +21,6 @@ public class Application {
 
         graphManager.addEdge("C", "A");
         graphManager.toString();
-
-        graphManager.outputGraph("outputs/main/mainOutputGraph.txt");
 
         graphManager.outputGraphics("outputs/main/mainOutputGraphics.png", "png");
         graphManager.outputGraphics("outputs/main/mainOutputGraphics.svg", "svg");

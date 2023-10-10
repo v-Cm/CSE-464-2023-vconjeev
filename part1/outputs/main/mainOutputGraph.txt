@@ -1,9 +1,7 @@
-Number of Nodes: 8
-Label of Nodes: [A, B, C, D, E, F, G, I]
-Number of Edges: 5
+Number of Nodes: 3
+Label of Nodes: [A, B, C]
+Number of Edges: 3
 Nodes and Edge Directions:
 C -> A
-B -> F
-D -> G
 B -> C
 A -> B

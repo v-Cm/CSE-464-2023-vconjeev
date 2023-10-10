@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="GraphManagerTest" time="3.146" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="GraphManagerTest" time="3.194" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire3726113736501854711\surefirebooter-20231008202157899_3.jar C:\Users\Admin\AppData\Local\Temp\surefire3726113736501854711 2023-10-08T20-21-57_392-jvmRun1 surefire-20231008202157899_1tmp surefire_0-20231008202157899_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire16792251095308342996\surefirebooter-20231009185548011_3.jar C:\Users\Admin\AppData\Local\Temp\surefire16792251095308342996 2023-10-09T18-55-47_808-jvmRun1 surefire-20231009185548011_1tmp surefire_0-20231009185548011_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Admin\CSE-464-2023-vconjeev\part1\target\test-classes;C:\Users\Admin\CSE-464-2023-vconjeev\part1\target\classes;C:\Users\Admin\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Admin\.m2\repository\guru\nidi\graphviz-java\0.18.1\graphviz-java-0.18.1.jar;C:\Users\Admin\.m2\repository\org\webjars\npm\viz.js-graphviz-java\2.1.3\viz.js-graphviz-java-2.1.3.jar;C:\Users\Admin\.m2\repository\guru\nidi\com\kitfox\svgSalamander\1.1.3\svgSalamander-1.1.3.jar;C:\Users\Admin\.m2\repository\net\arnx\nashorn-promise\0.1.1\nashorn-promise-0.1.1.jar;C:\Users\Admin\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Admin\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Admin\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Admin\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\Admin\.m2\repository\guru\nidi\com\eclipsesource\j2v8\j2v8_win32_x86_64\4.6.0\j2v8_win32_x86_64-4.6.0.jar;C:\Users\Admin\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-core\2.13.0\log4j-core-2.13.0.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.0\log4j-api-2.13.0.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.13.0\log4j-slf4j-impl-2.13.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire3726113736501854711\surefirebooter-20231008202157899_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire16792251095308342996\surefirebooter-20231009185548011_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21+35-LTS-2513"/>
@@ -58,28 +58,21 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testParseGraph" classname="GraphManagerTest" time="0.951"/>
-  <testcase name="testAddEdge" classname="GraphManagerTest" time="0.007">
-    <system-out><![CDATA[Number of Nodes: 3
-Label of Nodes: [A, B, C]
-Number of Edges: 3
-Nodes and Edge Directions:
-C -> A
-B -> C
-A -> B
-Edge already exist from C to A!
+  <testcase name="testParseGraph" classname="GraphManagerTest" time="0.781"/>
+  <testcase name="testAddEdge" classname="GraphManagerTest" time="0.008">
+    <system-out><![CDATA[Edge already exist from C to A!
 ]]></system-out>
   </testcase>
-  <testcase name="testAddNode" classname="GraphManagerTest" time="0.003">
+  <testcase name="testAddNode" classname="GraphManagerTest" time="0.002">
     <system-out><![CDATA[Node: A already exists! Cannot add.
 Node: B already exists! Cannot add.
 ]]></system-out>
   </testcase>
-  <testcase name="testOutputGraph" classname="GraphManagerTest" time="0.004">
-    <system-out><![CDATA[Graph output written to file: testOutputGraph.txt
+  <testcase name="testOutputGraph" classname="GraphManagerTest" time="0.006">
+    <system-out><![CDATA[Graph output written to file: outputs/test/testOutputGraph.txt
 ]]></system-out>
   </testcase>
-  <testcase name="testToString" classname="GraphManagerTest" time="0.011">
+  <testcase name="testToString" classname="GraphManagerTest" time="0.003">
     <system-out><![CDATA[Number of Nodes: 3
 Label of Nodes: [A, B, C]
 Number of Edges: 3
@@ -93,10 +86,10 @@ A -> B
     <system-out><![CDATA[Node: C already exists! Cannot add.
 ]]></system-out>
   </testcase>
-  <testcase name="testOutputGraphics" classname="GraphManagerTest" time="2.049">
-    <system-out><![CDATA[Graphic output available in file: testOutputGraphics.dot
-Graphic output available in file: testOutputGraphics.svg
-Graphic output available in file: testOutputGraphics.png
+  <testcase name="testOutputGraphics" classname="GraphManagerTest" time="2.308">
+    <system-out><![CDATA[Graphic output available in file: outputs/test/testOutputGraphics.dot
+Graphic output available in file: outputs/test/testOutputGraphics.svg
+Graphic output available in file: outputs/test/testOutputGraphics.png
 ]]></system-out>
   </testcase>
 </testsuite>
