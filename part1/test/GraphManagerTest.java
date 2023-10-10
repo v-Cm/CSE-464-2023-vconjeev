@@ -21,15 +21,15 @@ public class GraphManagerTest {
             "C -> A\n" +
             "B -> C\n" +
             "A -> B";
-    public static final String TEST_OUTPUT_GRAPH_FILE = "testOutputGraph.txt";
-    private static final String TEST_OUTPUT_GRAPHICS_PNG_FILE = "testOutputGraphics.png";
-    private static final String TEST_OUTPUT_GRAPHICS_SVG_FILE = "testOutputGraphics.svg";
-    private static final String TEST_OUTPUT_GRAPHICS_DOT_FILE = "testOutputGraphics.dot";
+    public static final String TEST_OUTPUT_GRAPH_FILE = "outputs/test/testOutputGraph.txt";
+    private static final String TEST_OUTPUT_GRAPHICS_PNG_FILE = "outputs/test/testOutputGraphics.png";
+    private static final String TEST_OUTPUT_GRAPHICS_SVG_FILE = "outputs/test/testOutputGraphics.svg";
+    private static final String TEST_OUTPUT_GRAPHICS_DOT_FILE = "outputs/test/testOutputGraphics.dot";
 
-    private static final String EXPECTED_OUTPUT_GRAPH_FILE = "expectedOutputGraph.txt";
-    private static final String EXPECTED_OUTPUT_GRAPHICS_PNG_FILE = "expectedOutputGraphics.png";
-    private static final String EXPECTED_OUTPUT_GRAPHICS_SVG_FILE = "expectedOutputGraphics.svg";
-    private static final String EXPECTED_OUTPUT_GRAPHICS_DOT_FILE = "expectedOutputGraphics.dot";
+    private static final String EXPECTED_OUTPUT_GRAPH_FILE = "outputs/expected/expectedOutputGraph.txt";
+    private static final String EXPECTED_OUTPUT_GRAPHICS_PNG_FILE = "outputs/expected/expectedOutputGraphics.png";
+    private static final String EXPECTED_OUTPUT_GRAPHICS_SVG_FILE = "outputs/expected/expectedOutputGraphics.svg";
+    private static final String EXPECTED_OUTPUT_GRAPHICS_DOT_FILE = "outputs/expected/expectedOutputGraphics.dot";
 
     @Before
     public void setUp() throws Exception {
@@ -83,7 +83,6 @@ public class GraphManagerTest {
 
     @Test
     public void testAddEdge(){
-        graphManager.toString();
         Assert.assertEquals(3, graphManager.edgeSize());
         graphManager.addEdge("B", "F");
         Assert.assertEquals(4, graphManager.edgeSize());

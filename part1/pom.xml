@@ -8,6 +8,8 @@
     <artifactId>cse-464-project</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <name>CSE 464 2023 vconjeev</name>
+
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
