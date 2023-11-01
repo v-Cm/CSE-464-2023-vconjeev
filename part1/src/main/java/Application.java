@@ -4,10 +4,10 @@ public class Application {
     public static void main(String[] args) throws IOException {
         GraphManager graphManager = new GraphManager();
 
-        graphManager.parseGraph("testInput.dot");
+        graphManager.parseGraph("part1/testInput.dot");
         graphManager.toString();
 
-        graphManager.outputGraph("outputs/main/mainOutputGraph.txt");
+        graphManager.outputGraph("part1/outputs/main/mainOutputGraph.txt");
 
         graphManager.addNode("F");
         graphManager.toString();
@@ -31,8 +31,8 @@ public class Application {
         graphManager.removeEdge("D", "G");
         graphManager.toString();
 
-        graphManager.outputGraphics("outputs/main/mainOutputGraphics.png", "png");
-        graphManager.outputGraphics("outputs/main/mainOutputGraphics.svg", "svg");
-        graphManager.outputGraphics("outputs/main/mainOutputGraphics.dot", "dot");
+        graphManager.outputGraphics("part1/outputs/main/mainOutputGraphics.png", "png");
+        graphManager.outputGraphics("part1/outputs/main/mainOutputGraphics.svg", "svg");
+        graphManager.outputGraphics("part1/outputs/main/mainOutputGraphics.dot", "dot");
     }
 }
