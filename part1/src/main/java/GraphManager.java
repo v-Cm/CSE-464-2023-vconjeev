@@ -96,4 +96,16 @@ public class GraphManager {
     public boolean containsEdge(String src, String dst) {
         return graph.containsEdge(src, dst);
     }
+
+    public void removeNode(String label){
+        graph.removeNode(label);
+    }
+
+    public void removeNodes(String... label){
+        graph.removeNodes(label);
+    }
+
+    public void removeEdge(String srcLabel, String dstLabel) {
+        graph.removeEdge(srcLabel, dstLabel);
+    }
 }

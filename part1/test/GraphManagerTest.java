@@ -82,6 +82,25 @@ public class GraphManagerTest {
     }
 
     @Test
+    public void testRemoveNode(){
+        Assert.assertEquals(3, graphManager.nodeSize());
+        graphManager.removeNode("A");
+        Assert.assertEquals(2, graphManager.nodeSize());
+        graphManager.removeNode("C");
+        Assert.assertEquals(1, graphManager.nodeSize());
+        Assert.assertEquals(0, graphManager.edgeSize());
+    }
+
+    @Test
+    public void testRemoveNodes(){
+        Assert.assertEquals(3, graphManager.nodeSize());
+        graphManager.removeNodes(new String[]{"A","C","F"});
+        Assert.assertEquals(1, graphManager.nodeSize());
+        graphManager.removeNodes("B","H "," P ");
+        Assert.assertEquals(0, graphManager.nodeSize());
+    }
+
+    @Test
     public void testAddEdge(){
         Assert.assertEquals(3, graphManager.edgeSize());
         graphManager.addEdge("B", "F");
@@ -90,6 +109,15 @@ public class GraphManagerTest {
         Assert.assertEquals(5, graphManager.edgeSize());
         graphManager.addEdge("C","A");
         Assert.assertEquals(5, graphManager.edgeSize());
+    }
+
+    @Test
+    public void testRemoveEdge(){
+        Assert.assertEquals(3, graphManager.edgeSize());
+        graphManager.removeEdge("B", "C");
+        Assert.assertEquals(2, graphManager.edgeSize());
+        graphManager.removeEdge(" A  ", "P");
+        Assert.assertEquals(2, graphManager.edgeSize());
     }
 
     // function to compare the test image and expected image of the graph

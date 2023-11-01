@@ -22,6 +22,15 @@ public class Application {
         graphManager.addEdge("C", "A");
         graphManager.toString();
 
+        graphManager.removeNode("F");
+        graphManager.toString();
+
+        graphManager.removeNodes(new String[]{"E", "A"});
+        graphManager.toString();
+
+        graphManager.removeEdge("D", "G");
+        graphManager.toString();
+
         graphManager.outputGraphics("outputs/main/mainOutputGraphics.png", "png");
         graphManager.outputGraphics("outputs/main/mainOutputGraphics.svg", "svg");
         graphManager.outputGraphics("outputs/main/mainOutputGraphics.dot", "dot");

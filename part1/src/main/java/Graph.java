@@ -83,4 +83,38 @@ public class Graph {
     public boolean containsEdge(String src, String dst) {
         return edges.containsKey(src + "->" + dst);
     }
+
+    public void removeNode(String nodeName){
+        nodeName = nodeName.trim();
+        if(nodes.remove(nodeName) != null){
+            String finalNodeName = nodeName;
+            List<String> edgesToBeRemoved = edges.values().stream()
+                    .filter(edge -> edge.getSource().toString().equals(finalNodeName)
+                            || edge.getDestination().toString().equals(finalNodeName))
+                    .map(edge -> (edge.getSource() + "->" + edge.getDestination()))
+                    .collect(Collectors.toList());
+            edgesToBeRemoved.forEach(each -> edges.remove(each));
+        }
+        else{
+            System.out.println("Node " + nodeName + " does not exist!");
+        }
+    }
+
+    public void removeNodes(String[] nodeNames){
+        for (String each : nodeNames) {
+            removeNode(each);
+        }
+    }
+
+    public void removeEdge(String srcLabel, String dstLabel) {
+        srcLabel = srcLabel.trim();
+        dstLabel = dstLabel.trim();
+        String edgeKey = srcLabel + "->" + dstLabel;
+        if (edges.containsKey(edgeKey)) {
+            edges.remove(edgeKey);
+        } else {
+            System.out.println("No such edge exist from " + srcLabel + " to " + dstLabel);
+
+        }
+    }
 }
