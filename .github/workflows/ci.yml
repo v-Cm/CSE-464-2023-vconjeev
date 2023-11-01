@@ -14,6 +14,11 @@ jobs:
       with:
         java-version: '21'
         distribution: 'temurin'
+    - name: Debug
+      run: |
+        ls -l
+        pwd
+        ls -l part1
     - name: Change Working Directory
       run: cd part1
       working-directory: part1
