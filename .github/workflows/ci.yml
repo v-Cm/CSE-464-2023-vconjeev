@@ -20,7 +20,7 @@ jobs:
         pwd
         ls -l part1
     - name: Change Working Directory
-      run: cd part1
-      working-directory: part1
+      run: cd ./part1
+      working-directory: ./part1
     - name: Build with Maven
       run: mvn test
