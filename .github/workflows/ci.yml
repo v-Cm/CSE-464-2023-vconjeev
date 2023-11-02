@@ -2,6 +2,10 @@ name: Java CI
 
 on: [push]
 
+defaults:
+ run:
+  working-directory: ./part1
+
 jobs:
   build:
 
@@ -19,8 +23,5 @@ jobs:
         ls -l
         pwd
         ls -l part1
-    - name: Change Working Directory
-      run: cd ./part1
-      working-directory: ./part1
     - name: Build with Maven
       run: mvn test
