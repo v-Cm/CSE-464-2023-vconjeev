@@ -18,10 +18,5 @@ jobs:
       with:
         java-version: '21'
         distribution: 'temurin'
-    - name: Debug
-      run: |
-        ls -l
-        pwd
-        ls -l part1
     - name: Build with Maven
       run: mvn test
