@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ec0fb492-3f55-48ce-bc06-26d0dbe4f657" name="Changes" comment="created test cases">
+      <change beforePath="$PROJECT_DIR$/part1/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;v-Cm&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="abefe295-4fea-4831-af57-5dca221a51d5" />
+        <option name="url" value="https://v-Cm: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@github.com/v-Cm/CSE-464-2023-vconjeev.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2XbNSqAQpLpVewjG7OkunzZhDU1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dfs",
+    "last_opened_file_path": "C:/Users/Admin/CSE-464-2023-vconjeev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "two.files.diff.last.used.folder": "C:/Users/Admin/CSE-464-2023-vconjeev",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.GraphManagerTest.testGraphSearch">
+    <configuration name="GraphManagerTest.testGraphSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cse-464-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GraphManagerTest" />
+      <option name="METHOD_NAME" value="testGraphSearch" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GraphManagerTest.testOutputGraphics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cse-464-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GraphManagerTest" />
+      <option name="METHOD_NAME" value="testOutputGraphics" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GraphManagerTest.testGraphSearch" />
+        <item itemvalue="JUnit.GraphManagerTest.testOutputGraphics" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec0fb492-3f55-48ce-bc06-26d0dbe4f657" name="Changes" comment="" />
+      <created>1698893821859</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698893821859</updated>
+      <workItem from="1698893822883" duration="5441000" />
+      <workItem from="1698900285669" duration="174000" />
+      <workItem from="1698900522828" duration="750000" />
+      <workItem from="1698982004121" duration="10289000" />
+      <workItem from="1698998742557" duration="174000" />
+    </task>
+    <task id="LOCAL-00001" summary="commented svg test">
+      <option name="closed" value="true" />
+      <created>1698895471928</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698895471928</updated>
+    </task>
+    <task id="LOCAL-00002" summary="modified ci.yml and test">
+      <option name="closed" value="true" />
+      <created>1698899102457</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698899102457</updated>
+    </task>
+    <task id="LOCAL-00003" summary="modified ci.yml">
+      <option name="closed" value="true" />
+      <created>1698899312675</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698899312675</updated>
+    </task>
+    <task id="LOCAL-00004" summary="modified ci.yml and test case">
+      <option name="closed" value="true" />
+      <created>1698899774672</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698899774672</updated>
+    </task>
+    <task id="LOCAL-00005" summary="created bfs branch and implemented bfs search">
+      <option name="closed" value="true" />
+      <created>1698985163327</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698985163327</updated>
+    </task>
+    <task id="LOCAL-00006" summary="created test cases">
+      <option name="closed" value="true" />
+      <created>1698996838818</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698996838819</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commented svg test" />
+    <MESSAGE value="modified ci.yml and test" />
+    <MESSAGE value="modified ci.yml" />
+    <MESSAGE value="modified ci.yml and test case" />
+    <MESSAGE value="created bfs branch and implemented bfs search" />
+    <MESSAGE value="created test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="created test cases" />
+  </component>
+</project>
