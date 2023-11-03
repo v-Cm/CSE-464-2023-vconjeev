@@ -117,4 +117,58 @@ public class Graph {
 
         }
     }
+
+    public Path findPathUsingDFS(Node sourceNode, Node destinationNode) {
+        if (!areValidNodes(sourceNode, destinationNode)) {
+            return null;
+        }
+
+        Map<String, List<Node>> edgeMapping = getEdgeMapping();
+        Set<String> visitedNodes = new HashSet<>();
+        Path path = new Path();
+
+        return searchDestDFS(sourceNode.toString(), destinationNode.toString(), edgeMapping, path, visitedNodes) ? path : null;
+    }
+
+    private boolean areValidNodes(Node... nodes) {
+        for (Node node : nodes) {
+            if (!this.nodes.containsKey(node.toString())){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean searchDestDFS(String current, String destination, Map<String, List<Node>> edgeMapping,
+                                                Path path, Set<String> visitedNodes) {
+        if (visitedNodes.contains(current)) {
+            return false;
+        } else {
+            visitedNodes.add(current);
+            path.addNodeInTheEnd(new Node(current));
+            if (current.equals(destination)) {
+                return true;
+            } else {
+                List<Node> possibleDestinations = edgeMapping.getOrDefault(current, new LinkedList<>());
+                for (Node eachDestination : possibleDestinations) {
+                    if (searchDestDFS(eachDestination.toString(), destination, edgeMapping, path, visitedNodes)) {
+                        return true;
+                    }
+                }
+            }
+            path.delLastNode();
+            return false;
+        }
+    }
+    private Map<String, List<Node>> getEdgeMapping() {
+        Map<String, List<Node>> edgeMapping = new HashMap<>();
+        if (!edges.values().isEmpty()){
+            for (Edge eachEdge : edges.values()) {
+                List<Node> list = edgeMapping.getOrDefault(eachEdge.getSource().toString(), new LinkedList<>());
+                list.add(eachEdge.getDestination());
+                edgeMapping.put(eachEdge.getSource().toString(), list);
+            }
+        }
+        return edgeMapping;
+    }
 }
