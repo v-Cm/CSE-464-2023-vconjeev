@@ -117,4 +117,65 @@ public class Graph {
 
         }
     }
+
+    public Path findPathUsingBFS(Node src, Node dst) {
+        if (!isNodeValid(src, dst))
+            return null;
+
+        Map<String, String> parentMap = new HashMap<>();
+        parentMap.put(src.toString(), null);
+        Map<String, List<Node>> edgeMap = buildEdgeMap();
+        Queue<String> queue = new LinkedList<>();
+        Set<String> visited = new HashSet<>();
+        queue.add(src.toString());
+
+        while (!queue.isEmpty()) {
+            String current = queue.poll();
+            if (!visited.contains(current)) {
+                visited.add(current);
+
+                if (current.equals(dst.toString()))
+                    break;
+
+                for (Node eachDst : edgeMap.getOrDefault(current, new LinkedList<>())) {
+                    queue.add(eachDst.toString());
+                    parentMap.putIfAbsent(eachDst.toString(), current);
+                }
+            }
+        }
+
+        return traversePath(parentMap, dst);
+    }
+
+    private boolean isNodeValid(Node... nodes) {
+        for (Node node : nodes) {
+            if (!this.nodes.containsKey(node.toString()))
+                return false;
+        }
+        return true;
+    }
+
+    private Map<String, List<Node>> buildEdgeMap() {
+        Map<String, List<Node>> edgeMap = new HashMap<>();
+        if (!edges.values().isEmpty()) {
+            for (Edge eachEdge : edges.values()) {
+                edgeMap.computeIfAbsent(eachEdge.getSource().toString(), k -> new LinkedList<>()).add(eachEdge.getDestination());
+            }
+        }
+        return edgeMap;
+    }
+
+    private Path traversePath(Map<String, String> parentMap, Node dst) {
+        Path path = null;
+        if (parentMap.containsKey(dst.toString())) {
+            path = new Path();
+            path.addNodeInTheFront(dst);
+            String parent = parentMap.get(dst.toString());
+            while (parent != null) {
+                path.addNodeInTheFront(new Node(parent));
+                parent = parentMap.get(parent);
+            }
+        }
+        return path;
+    }
 }

@@ -108,4 +108,8 @@ public class GraphManager {
     public void removeEdge(String srcLabel, String dstLabel) {
         graph.removeEdge(srcLabel, dstLabel);
     }
+
+    public Path GraphSearch(Node src, Node dst) {
+        return graph.findPathUsingBFS(src, dst);
+    }
 }
