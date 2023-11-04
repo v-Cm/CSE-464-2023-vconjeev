@@ -128,7 +128,8 @@ public class Graph {
         Path path = new Path();
 
         return searchDestDFS(sourceNode.toString(), destinationNode.toString(), edgeMapping, path, visitedNodes) ? path : null;
-
+    }
+    
     public Path findPathUsingBFS(Node sourceNode, Node destinationNode) {
 
         if (!areValidNodes(sourceNode, destinationNode)){
