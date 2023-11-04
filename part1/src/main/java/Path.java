@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.stream.Collectors;
 
@@ -15,6 +16,11 @@ public class Path {
     public Node delLastNode(){
         return nodesInPath.removeLast();
     }
+  
+    public void addNodeInTheFront(Node node){
+        nodesInPath.addFirst(node);
+    }
+
     @Override
     public String toString() {
         return nodesInPath.stream()

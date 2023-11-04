@@ -110,6 +110,8 @@ public class GraphManager {
     }
 
     public Path GraphSearch(Node src, Node dst) {
-        return graph.findPathUsingDFS(src, dst);
+        // implement algo enum
+        //return graph.findPathUsingDFS(src, dst);
+        return graph.findPathUsingBFS(src, dst);
     }
 }
