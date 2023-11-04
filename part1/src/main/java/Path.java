@@ -9,6 +9,14 @@ public class Path {
         nodesInPath = new LinkedList<>();
     }
 
+    public void addNodeInTheEnd(Node node){
+        nodesInPath.add(node);
+    }
+
+    public Node delLastNode(){
+        return nodesInPath.removeLast();
+    }
+  
     public void addNodeInTheFront(Node node){
         nodesInPath.addFirst(node);
     }
@@ -19,5 +27,4 @@ public class Path {
                 .map(Node::toString)
                 .collect(Collectors.joining(" -> "));
     }
-
 }

@@ -22,14 +22,20 @@ public class Application {
         graphManager.addEdge("C", "A");
         graphManager.toString();
 
-        graphManager.removeNode("F");
-        graphManager.toString();
+//        graphManager.removeNode("F");
+//        graphManager.toString();
+//
+//        graphManager.removeNodes(new String[]{"E", "A"});
+//        graphManager.toString();
+//
+//        graphManager.removeEdge("D", "G");
+//        graphManager.toString();
 
-        graphManager.removeNodes(new String[]{"E", "A"});
-        graphManager.toString();
+        Path path = graphManager.GraphSearch(new Node("A"), new Node("A"));
+        System.out.println(path != null ? "The path:" + path : "No path exists.");
 
-        graphManager.removeEdge("D", "G");
-        graphManager.toString();
+        path = graphManager.GraphSearch(new Node("B"), new Node("A"));
+        System.out.println(path != null ? "The path:" + path : "No path exists.");
 
         Path path = graphManager.GraphSearch(new Node("A"), new Node("A"));
         System.out.println(path != null ? "The path:" + path : "No path exists.");
