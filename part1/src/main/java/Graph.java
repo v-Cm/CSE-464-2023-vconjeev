@@ -117,4 +117,74 @@ public class Graph {
 
         }
     }
+
+    public Path findPathUsingBFS(Node sourceNode, Node destinationNode) {
+
+        if (!areValidNodes(sourceNode, destinationNode)){
+            return null;
+        }
+
+        Map<String, String> parentMapping = new HashMap<>();
+        parentMapping.put(sourceNode.toString(), null);
+        Map<String, List<Node>> edgeMapping = getEdgeMapping();
+        Queue<String> nodeQueue = new LinkedList<>();
+        Set<String> visitedNodes = new HashSet<>();
+        nodeQueue.add(sourceNode.toString());
+        while (!nodeQueue.isEmpty()){
+            String current = nodeQueue.poll();
+            if (!visitedNodes.contains(current)){
+                visitedNodes.add(current);
+
+                if (current.equals(destinationNode.toString())){
+                    break;
+                }
+
+                List<Node> possibleDestinations = edgeMapping.getOrDefault(current, new LinkedList<>());
+                for (Node eachDestination : possibleDestinations) {
+                    nodeQueue.add(eachDestination.toString());
+                    if (!parentMapping.containsKey(eachDestination.toString())){
+                        parentMapping.put(eachDestination.toString(), current);
+                    }
+                }
+            }
+        }
+
+        return createPath(parentMapping, destinationNode);
+    }
+
+    private boolean areValidNodes(Node... nodes) {
+        for (Node node : nodes) {
+            if (!this.nodes.containsKey(node.toString())){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private Map<String, List<Node>> getEdgeMapping() {
+        Map<String, List<Node>> edgeMapping = new HashMap<>();
+        if (!edges.values().isEmpty()){
+            for (Edge eachEdge : edges.values()) {
+                List<Node> list = edgeMapping.getOrDefault(eachEdge.getSource().toString(), new LinkedList<>());
+                list.add(eachEdge.getDestination());
+                edgeMapping.put(eachEdge.getSource().toString(), list);
+            }
+        }
+        return edgeMapping;
+    }
+
+    private Path createPath(Map<String, String> childToParentMapping, Node destinationNode) {
+        Path path = null;
+        if (childToParentMapping.containsKey(destinationNode.toString())){
+            path = new Path();
+            path.addNodeInTheFront(destinationNode);
+            String parent = childToParentMapping.get(destinationNode.toString());
+            while (parent != null){
+                path.addNodeInTheFront(new Node(parent));
+                parent = childToParentMapping.get(parent);
+            }
+        }
+        return path;
+    }
+
 }

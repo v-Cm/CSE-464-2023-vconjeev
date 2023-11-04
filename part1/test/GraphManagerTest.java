@@ -165,4 +165,22 @@ public class GraphManagerTest {
         BufferedImage actualImage = ImageIO.read(new File(TEST_OUTPUT_GRAPHICS_PNG_FILE));
         Assert.assertEquals(0, checkImagesEqual(expectedImage, actualImage));
     }
+
+    @Test
+    public void testGraphSearch() {
+        Assert.assertEquals("A", graphManager.GraphSearch(new Node("A"), new Node("A")).toString());
+        Assert.assertEquals("B -> C -> A", graphManager.GraphSearch(new Node("B"), new Node("A")).toString());
+
+        graphManager.addNodes(new String[]{"D","E","F"});
+        graphManager.addEdge("C","F");
+        graphManager.addEdge("D","E");
+        graphManager.addEdge("F","D");
+
+        Assert.assertEquals("A -> B -> C -> F -> D -> E", graphManager.GraphSearch(new Node("A"), new Node("E")).toString());
+
+        graphManager.addNode("X");
+        Assert.assertNull(graphManager.GraphSearch(new Node("A"), new Node("X")));
+        Assert.assertNull(graphManager.GraphSearch(new Node("F"), new Node("B")));
+        Assert.assertNull(graphManager.GraphSearch(new Node("E"), new Node("S")));
+    }
 }
