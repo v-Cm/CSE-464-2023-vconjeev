@@ -37,12 +37,6 @@ public class Application {
         path = graphManager.GraphSearch(new Node("B"), new Node("A"));
         System.out.println(path != null ? "The path:" + path : "No path exists.");
 
-        Path path = graphManager.GraphSearch(new Node("A"), new Node("A"));
-        System.out.println(path != null ? "The path:" + path : "No path exists.");
-
-        path = graphManager.GraphSearch(new Node("B"), new Node("A"));
-        System.out.println(path != null ? "The path:" + path : "No path exists.");
-
         graphManager.outputGraphics("part1/outputs/main/mainOutputGraphics.png", "png");
         graphManager.outputGraphics("part1/outputs/main/mainOutputGraphics.svg", "svg");
         graphManager.outputGraphics("part1/outputs/main/mainOutputGraphics.dot", "dot");
