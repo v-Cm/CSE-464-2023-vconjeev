@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="Added algorithm enum to graphsearch">
+    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="modified Application.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/outputs/main/mainOutputGraphics.dot" beforeDir="false" afterPath="$PROJECT_DIR$/part1/outputs/main/mainOutputGraphics.dot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/outputs/main/mainOutputGraphics.png" beforeDir="false" afterPath="$PROJECT_DIR$/part1/outputs/main/mainOutputGraphics.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/outputs/main/mainOutputGraphics.svg" beforeDir="false" afterPath="$PROJECT_DIR$/part1/outputs/main/mainOutputGraphics.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/classes/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/classes/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/Graph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/classes/GraphManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/GraphManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/classes/Path.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/Path.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/cse-464-project-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/cse-464-project-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/surefire-reports/GraphManagerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/surefire-reports/GraphManagerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/surefire-reports/TEST-GraphManagerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/surefire-reports/TEST-GraphManagerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/test-classes/GraphManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/test-classes/GraphManagerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/README.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +27,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/part1/src/main/java/Application.java" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -109,12 +101,21 @@
       <option name="project" value="LOCAL" />
       <updated>1699147927209</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modified Application.java">
+      <option name="closed" value="true" />
+      <created>1699166984588</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699166984588</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implemented dfs function" />
     <MESSAGE value="Added algorithm enum to graphsearch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added algorithm enum to graphsearch" />
+    <MESSAGE value="modified Application.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified Application.java" />
   </component>
 </project>
