@@ -109,9 +109,12 @@ public class GraphManager {
         graph.removeEdge(srcLabel, dstLabel);
     }
 
-    public Path GraphSearch(Node src, Node dst) {
-        // implement algo enum
-        //return graph.findPathUsingDFS(src, dst);
-        return graph.findPathUsingBFS(src, dst);
+    public Path GraphSearch(Node src, Node dst, Algorithm algo) {
+        if(algo == Algorithm.BFS)
+            return graph.findPathUsingBFS(src, dst);
+        else if (algo == Algorithm.DFS)
+            return graph.findPathUsingDFS(src, dst);
+        else
+            return null;
     }
 }

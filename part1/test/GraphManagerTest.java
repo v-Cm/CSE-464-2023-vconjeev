@@ -167,20 +167,40 @@ public class GraphManagerTest {
     }
 
     @Test
-    public void testGraphSearch() {
-        Assert.assertEquals("A", graphManager.GraphSearch(new Node("A"), new Node("A")).toString());
-        Assert.assertEquals("B -> C -> A", graphManager.GraphSearch(new Node("B"), new Node("A")).toString());
+    public void testGraphSearchBFS() {
+        Assert.assertEquals("A", graphManager.GraphSearch(new Node("A"), new Node("A"), Algorithm.BFS).toString());
+        Assert.assertEquals("B -> C -> A", graphManager.GraphSearch(new Node("B"), new Node("A"), Algorithm.BFS).toString());
 
         graphManager.addNodes(new String[]{"D","E","F"});
         graphManager.addEdge("C","F");
         graphManager.addEdge("D","E");
         graphManager.addEdge("F","D");
 
-        Assert.assertEquals("A -> B -> C -> F -> D -> E", graphManager.GraphSearch(new Node("A"), new Node("E")).toString());
+        Assert.assertEquals("A -> B -> C -> F -> D -> E", graphManager.GraphSearch(new Node("A"), new Node("E"), Algorithm.BFS).toString());
 
         graphManager.addNode("X");
-        Assert.assertNull(graphManager.GraphSearch(new Node("A"), new Node("X")));
-        Assert.assertNull(graphManager.GraphSearch(new Node("F"), new Node("B")));
-        Assert.assertNull(graphManager.GraphSearch(new Node("E"), new Node("S")));
+        Assert.assertNull(graphManager.GraphSearch(new Node("A"), new Node("X"), Algorithm.BFS));
+        Assert.assertNull(graphManager.GraphSearch(new Node("F"), new Node("B"), Algorithm.BFS));
+        Assert.assertNull(graphManager.GraphSearch(new Node("E"), new Node("S"), Algorithm.BFS));
+        Assert.assertNull(graphManager.GraphSearch(new Node("B"), new Node("A"), Algorithm.INVALID));
+    }
+
+    @Test
+    public void testGraphSearchDFS() {
+        Assert.assertEquals("B", graphManager.GraphSearch(new Node("B"), new Node("B"), Algorithm.DFS).toString());
+        Assert.assertEquals("C -> A -> B", graphManager.GraphSearch(new Node("C"), new Node("B"), Algorithm.DFS).toString());
+
+        graphManager.addNodes(new String[]{"T","R","P"});
+        graphManager.addEdge("C","P");
+        graphManager.addEdge("T","R");
+        graphManager.addEdge("P","T");
+
+        Assert.assertEquals("A -> B -> C -> P -> T -> R", graphManager.GraphSearch(new Node("A"), new Node("R"), Algorithm.DFS).toString());
+
+        graphManager.addNode("M");
+        Assert.assertNull(graphManager.GraphSearch(new Node("A"), new Node("M"), Algorithm.DFS));
+        Assert.assertNull(graphManager.GraphSearch(new Node("P"), new Node("B"), Algorithm.DFS));
+        Assert.assertNull(graphManager.GraphSearch(new Node("R"), new Node("S"), Algorithm.DFS));
+        Assert.assertNull(graphManager.GraphSearch(new Node("B"), new Node("A"), Algorithm.INVALID));
     }
 }

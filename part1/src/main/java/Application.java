@@ -31,10 +31,16 @@ public class Application {
 //        graphManager.removeEdge("D", "G");
 //        graphManager.toString();
 
-        Path path = graphManager.GraphSearch(new Node("A"), new Node("A"));
+        Path path = graphManager.GraphSearch(new Node("A"), new Node("A"), Algorithm.BFS);
         System.out.println(path != null ? "The path:" + path : "No path exists.");
 
-        path = graphManager.GraphSearch(new Node("B"), new Node("A"));
+        path = graphManager.GraphSearch(new Node("B"), new Node("A"), Algorithm.BFS);
+        System.out.println(path != null ? "The path:" + path : "No path exists.");
+
+        path = graphManager.GraphSearch(new Node("A"), new Node("A"), Algorithm.DFS);
+        System.out.println(path != null ? "The path:" + path : "No path exists.");
+
+        path = graphManager.GraphSearch(new Node("B"), new Node("A"), Algorithm.DFS);
         System.out.println(path != null ? "The path:" + path : "No path exists.");
 
         graphManager.outputGraphics("part1/outputs/main/mainOutputGraphics.png", "png");
