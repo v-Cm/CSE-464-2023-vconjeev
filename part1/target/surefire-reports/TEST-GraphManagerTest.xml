@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="GraphManagerTest" time="3.282" tests="12" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="GraphManagerTest" time="1.714" tests="12" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire13275598859000881546\surefirebooter-20231104183117105_3.jar C:\Users\Admin\AppData\Local\Temp\surefire13275598859000881546 2023-11-04T18-31-16_927-jvmRun1 surefire-20231104183117105_1tmp surefire_0-20231104183117105_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire6710775461628838106\surefirebooter-20231104183844073_3.jar C:\Users\Admin\AppData\Local\Temp\surefire6710775461628838106 2023-11-04T18-38-43_867-jvmRun1 surefire-20231104183844073_1tmp surefire_0-20231104183844073_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Admin\CSE-464-2023-vconjeev\part1\target\test-classes;C:\Users\Admin\CSE-464-2023-vconjeev\part1\target\classes;C:\Users\Admin\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Admin\.m2\repository\guru\nidi\graphviz-java\0.18.1\graphviz-java-0.18.1.jar;C:\Users\Admin\.m2\repository\org\webjars\npm\viz.js-graphviz-java\2.1.3\viz.js-graphviz-java-2.1.3.jar;C:\Users\Admin\.m2\repository\guru\nidi\com\kitfox\svgSalamander\1.1.3\svgSalamander-1.1.3.jar;C:\Users\Admin\.m2\repository\net\arnx\nashorn-promise\0.1.1\nashorn-promise-0.1.1.jar;C:\Users\Admin\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Admin\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Admin\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\Admin\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar;C:\Users\Admin\.m2\repository\guru\nidi\com\eclipsesource\j2v8\j2v8_win32_x86_64\4.6.0\j2v8_win32_x86_64-4.6.0.jar;C:\Users\Admin\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-core\2.13.0\log4j-core-2.13.0.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.0\log4j-api-2.13.0.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.13.0\log4j-slf4j-impl-2.13.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire13275598859000881546\surefirebooter-20231104183117105_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire6710775461628838106\surefirebooter-20231104183844073_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21+35-LTS-2513"/>
@@ -58,21 +58,21 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testParseGraph" classname="GraphManagerTest" time="0.806"/>
-  <testcase name="testAddEdge" classname="GraphManagerTest" time="0.02">
+  <testcase name="testParseGraph" classname="GraphManagerTest" time="0.573"/>
+  <testcase name="testAddEdge" classname="GraphManagerTest" time="0.008">
     <system-out><![CDATA[Edge already exist from C to A!
 ]]></system-out>
   </testcase>
-  <testcase name="testAddNode" classname="GraphManagerTest" time="0.003">
+  <testcase name="testAddNode" classname="GraphManagerTest" time="0.002">
     <system-out><![CDATA[Node: A already exists! Cannot add.
 Node: B already exists! Cannot add.
 ]]></system-out>
   </testcase>
-  <testcase name="testOutputGraph" classname="GraphManagerTest" time="0.005">
+  <testcase name="testOutputGraph" classname="GraphManagerTest" time="0.004">
     <system-out><![CDATA[Graph output written to file: outputs/test/testOutputGraph.txt
 ]]></system-out>
   </testcase>
-  <testcase name="testToString" classname="GraphManagerTest" time="0.005">
+  <testcase name="testToString" classname="GraphManagerTest" time="0.003">
     <system-out><![CDATA[Number of Nodes: 3
 Label of Nodes: [A, B, C]
 Number of Edges: 3
@@ -82,24 +82,24 @@ B -> C
 A -> B
 ]]></system-out>
   </testcase>
-  <testcase name="testRemoveNodes" classname="GraphManagerTest" time="0.016">
+  <testcase name="testRemoveNodes" classname="GraphManagerTest" time="0.005">
     <system-out><![CDATA[Node F does not exist!
 Node H does not exist!
 Node P does not exist!
 ]]></system-out>
   </testcase>
-  <testcase name="testAddNodes" classname="GraphManagerTest" time="0.009">
+  <testcase name="testAddNodes" classname="GraphManagerTest" time="0.002">
     <system-out><![CDATA[Node: C already exists! Cannot add.
 ]]></system-out>
   </testcase>
-  <testcase name="testGraphSearchBFS" classname="GraphManagerTest" time="0.001"/>
-  <testcase name="testGraphSearchDFS" classname="GraphManagerTest" time="0.005"/>
-  <testcase name="testRemoveEdge" classname="GraphManagerTest" time="0.008">
+  <testcase name="testGraphSearchBFS" classname="GraphManagerTest" time="0.005"/>
+  <testcase name="testGraphSearchDFS" classname="GraphManagerTest" time="0.003"/>
+  <testcase name="testRemoveEdge" classname="GraphManagerTest" time="0.004">
     <system-out><![CDATA[No such edge exist from A to P
 ]]></system-out>
   </testcase>
-  <testcase name="testRemoveNode" classname="GraphManagerTest" time="0.001"/>
-  <testcase name="testOutputGraphics" classname="GraphManagerTest" time="2.298">
+  <testcase name="testRemoveNode" classname="GraphManagerTest" time="0.0"/>
+  <testcase name="testOutputGraphics" classname="GraphManagerTest" time="1.029">
     <system-out><![CDATA[Graphic output available in file: outputs/test/testOutputGraphics.dot
 Graphic output available in file: outputs/test/testOutputGraphics.png
 ]]></system-out>
