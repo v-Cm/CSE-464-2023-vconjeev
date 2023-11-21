@@ -60,7 +60,10 @@ public class Graph {
     private void createEdge(String srcLabel, String dstLabel) {
         Node src = nodes.get(srcLabel);
         Node dst = nodes.get(dstLabel);
-        edges.putIfAbsent(srcLabel + EDGE_SEPARATOR + dstLabel, new Edge(src, dst));
+
+        String edgeKey = srcLabel + EDGE_SEPARATOR + dstLabel;
+
+        edges.putIfAbsent(edgeKey, new Edge(src, dst));
     }
 
     public void addEdge(String srcLabel, String dstLabel) {
@@ -234,3 +237,4 @@ public class Graph {
 //extract variable on "->"
 //extract method on findPathUsingBFS
 //extract method removeNode
+//extract variable on createEdge

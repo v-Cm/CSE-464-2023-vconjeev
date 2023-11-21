@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="extract variable and remove failing extract method DFS on Graph.java">
+    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="extract method on Graph.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/src/main/java/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/classes/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/Graph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/test-classes/GraphManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/test-classes/GraphManagerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700531660821</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="extract method on Graph.java">
+      <option name="closed" value="true" />
+      <created>1700532497498</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700532497498</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -169,8 +176,8 @@
     <MESSAGE value="adding readme2.pdf" />
     <MESSAGE value="created refactor branch" />
     <MESSAGE value="extract method on Application.java" />
-    <MESSAGE value="extract method on Graph.java" />
     <MESSAGE value="extract variable and remove failing extract method DFS on Graph.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="extract variable and remove failing extract method DFS on Graph.java" />
+    <MESSAGE value="extract method on Graph.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="extract method on Graph.java" />
   </component>
 </project>
