@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="created refactor branch">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/classes/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/test/GraphManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/test/GraphManagerTest.java" afterDir="false" />
+    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="extract method on Application.java">
+      <change beforePath="$PROJECT_DIR$/part1/src/main/java/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/Graph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700181739101</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="extract method on Application.java">
+      <option name="closed" value="true" />
+      <created>1700530263660</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700530263660</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -136,6 +141,7 @@
     <MESSAGE value="modified Application.java" />
     <MESSAGE value="adding readme2.pdf" />
     <MESSAGE value="created refactor branch" />
-    <option name="LAST_COMMIT_MESSAGE" value="created refactor branch" />
+    <MESSAGE value="extract method on Application.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="extract method on Application.java" />
   </component>
 </project>

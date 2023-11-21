@@ -174,7 +174,7 @@ public class Graph {
     }
 
     private boolean searchDestDFS(String current, String destination, Map<String, List<Node>> edgeMapping,
-                                                Path path, Set<String> visitedNodes) {
+                                  Path path, Set<String> visitedNodes) {
         if (visitedNodes.contains(current)) {
             return false;
         } else {
@@ -183,15 +183,20 @@ public class Graph {
             if (current.equals(destination)) {
                 return true;
             } else {
-                List<Node> possibleDestinations = edgeMapping.getOrDefault(current, new LinkedList<>());
-                for (Node eachDestination : possibleDestinations) {
-                    if (searchDestDFS(eachDestination.toString(), destination, edgeMapping, path, visitedNodes)) {
-                        return true;
-                    }
-                }
+                exploreNeighborsDFS(current, destination, edgeMapping, path, visitedNodes);
             }
             path.delLastNode();
             return false;
+        }
+    }
+
+    private void exploreNeighborsDFS(String current, String destination, Map<String, List<Node>> edgeMapping,
+                                     Path path, Set<String> visitedNodes) {
+        List<Node> possibleDestinations = edgeMapping.getOrDefault(current, new LinkedList<>());
+        for (Node eachDestination : possibleDestinations) {
+            if (searchDestDFS(eachDestination.toString(), destination, edgeMapping, path, visitedNodes)) {
+                break;
+            }
         }
     }
   
@@ -222,3 +227,4 @@ public class Graph {
     }
 
 }
+//extract method on searchDestDFS
