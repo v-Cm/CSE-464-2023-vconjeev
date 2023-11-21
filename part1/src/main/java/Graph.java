@@ -129,9 +129,8 @@ public class Graph {
 
         return searchDestDFS(sourceNode.toString(), destinationNode.toString(), edgeMapping, path, visitedNodes) ? path : null;
     }
-    
-    public Path findPathUsingBFS(Node sourceNode, Node destinationNode) {
 
+    public Path findPathUsingBFS(Node sourceNode, Node destinationNode) {
         if (!areValidNodes(sourceNode, destinationNode)){
             return null;
         }
@@ -151,17 +150,22 @@ public class Graph {
                     break;
                 }
 
-                List<Node> possibleDestinations = edgeMapping.getOrDefault(current, new LinkedList<>());
-                for (Node eachDestination : possibleDestinations) {
-                    nodeQueue.add(eachDestination.toString());
-                    if (!parentMapping.containsKey(eachDestination.toString())){
-                        parentMapping.put(eachDestination.toString(), current);
-                    }
-                }
+                exploreNeighborsBFS(current, destinationNode, edgeMapping, parentMapping, nodeQueue);
             }
         }
 
         return createPath(parentMapping, destinationNode);
+    }
+
+    private void exploreNeighborsBFS(String current, Node destinationNode, Map<String, List<Node>> edgeMapping,
+                                     Map<String, String> parentMapping, Queue<String> nodeQueue) {
+        List<Node> possibleDestinations = edgeMapping.getOrDefault(current, new LinkedList<>());
+        for (Node eachDestination : possibleDestinations) {
+            nodeQueue.add(eachDestination.toString());
+            if (!parentMapping.containsKey(eachDestination.toString())){
+                parentMapping.put(eachDestination.toString(), current);
+            }
+        }
     }
 
     private boolean areValidNodes(Node... nodes) {
@@ -228,3 +232,4 @@ public class Graph {
 
 }
 //extract method on searchDestDFS
+//extract method on findPathUsingBFS
