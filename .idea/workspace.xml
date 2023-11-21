@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="extract method on Graph.java">
+    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="extract variable on Graph.java">
+      <change afterPath="$PROJECT_DIR$/part1/src/main/java/BFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part1/src/main/java/DFS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part1/src/main/java/GraphSearchTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/src/main/java/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/src/main/java/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/Path.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/classes/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/classes/Path.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/Path.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +44,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2XjTvRR1vSbt8yBylAjGkTyBAIf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -166,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700532497498</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="extract variable on Graph.java">
+      <option name="closed" value="true" />
+      <created>1700532653344</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700532653344</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -178,6 +194,7 @@
     <MESSAGE value="extract method on Application.java" />
     <MESSAGE value="extract variable and remove failing extract method DFS on Graph.java" />
     <MESSAGE value="extract method on Graph.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="extract method on Graph.java" />
+    <MESSAGE value="extract variable on Graph.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="extract variable on Graph.java" />
   </component>
 </project>
