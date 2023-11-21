@@ -86,20 +86,23 @@ public class Graph {
         return edges.containsKey(src + EDGE_SEPARATOR + dst);
     }
 
-    public void removeNode(String nodeName){
+    public void removeNode(String nodeName) {
         nodeName = nodeName.trim();
-        if(nodes.remove(nodeName) != null){
-            String finalNodeName = nodeName;
-            List<String> edgesToBeRemoved = edges.values().stream()
-                    .filter(edge -> edge.getSource().toString().equals(finalNodeName)
-                            || edge.getDestination().toString().equals(finalNodeName))
-                    .map(edge -> (edge.getSource() + EDGE_SEPARATOR + edge.getDestination()))
-                    .collect(Collectors.toList());
-            edgesToBeRemoved.forEach(each -> edges.remove(each));
-        }
-        else{
+        if (nodes.remove(nodeName) != null) {
+            removeAssociatedEdges(nodeName);
+        } else {
             System.out.println("Node " + nodeName + " does not exist!");
         }
+    }
+
+    private void removeAssociatedEdges(String nodeName) {
+        String finalNodeName = nodeName;
+        List<String> edgesToBeRemoved = edges.values().stream()
+                .filter(edge -> edge.getSource().toString().equals(finalNodeName)
+                        || edge.getDestination().toString().equals(finalNodeName))
+                .map(edge -> (edge.getSource() + EDGE_SEPARATOR + edge.getDestination()))
+                .collect(Collectors.toList());
+        edgesToBeRemoved.forEach(each -> edges.remove(each));
     }
 
     public void removeNodes(String[] nodeNames){
@@ -230,3 +233,4 @@ public class Graph {
 }
 //extract variable on "->"
 //extract method on findPathUsingBFS
+//extract method removeNode
