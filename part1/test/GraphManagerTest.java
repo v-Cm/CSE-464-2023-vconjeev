@@ -153,12 +153,6 @@ public class GraphManagerTest {
         expected = Files.readAllLines(Paths.get(EXPECTED_OUTPUT_GRAPHICS_DOT_FILE));
         Assert.assertEquals(expected, output);
 
-        // test SVG file
-//        graphManager.outputGraphics(TEST_OUTPUT_GRAPHICS_SVG_FILE, "svg");
-//        output = Files.readAllLines(Paths.get(TEST_OUTPUT_GRAPHICS_SVG_FILE));
-//        expected = Files.readAllLines(Paths.get(EXPECTED_OUTPUT_GRAPHICS_SVG_FILE));
-//        Assert.assertEquals(expected, output);
-
         // test PNG file
         graphManager.outputGraphics(TEST_OUTPUT_GRAPHICS_PNG_FILE, "png");
         BufferedImage expectedImage = ImageIO.read(new File(EXPECTED_OUTPUT_GRAPHICS_PNG_FILE));

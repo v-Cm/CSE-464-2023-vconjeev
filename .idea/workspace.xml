@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="adding readme2.pdf">
+    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="created refactor branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/cse-464-project-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/cse-464-project-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/surefire-reports/GraphManagerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/surefire-reports/GraphManagerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part1/target/surefire-reports/TEST-GraphManagerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/surefire-reports/TEST-GraphManagerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/classes/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/test/GraphManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/test/GraphManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +31,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/part1/src/main/java/Application.java" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/part1/src/main/java/Application.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -49,7 +49,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refactor&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/CSE-464-2023-vconjeev&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
@@ -119,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699171737193</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="created refactor branch">
+      <option name="closed" value="true" />
+      <created>1700181739101</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700181739101</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -127,6 +135,7 @@
     <MESSAGE value="Added algorithm enum to graphsearch" />
     <MESSAGE value="modified Application.java" />
     <MESSAGE value="adding readme2.pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding readme2.pdf" />
+    <MESSAGE value="created refactor branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="created refactor branch" />
   </component>
 </project>
