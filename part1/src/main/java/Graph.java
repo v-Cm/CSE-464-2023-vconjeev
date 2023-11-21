@@ -13,6 +13,8 @@ public class Graph {
     private Map<String, Node> nodes;
     private Map<String, Edge> edges;
 
+    private static final String EDGE_SEPARATOR = "->";
+
     public Graph(MutableGraph mutableGraph) {
         nodes = new HashMap<>();
         edges = new HashMap<>();
@@ -58,11 +60,11 @@ public class Graph {
     private void createEdge(String srcLabel, String dstLabel) {
         Node src = nodes.get(srcLabel);
         Node dst = nodes.get(dstLabel);
-        edges.putIfAbsent(srcLabel + "->" + dstLabel, new Edge(src, dst));
+        edges.putIfAbsent(srcLabel + EDGE_SEPARATOR + dstLabel, new Edge(src, dst));
     }
 
     public void addEdge(String srcLabel, String dstLabel) {
-        if(!edges.containsKey(srcLabel + "->" + dstLabel)){
+        if(!edges.containsKey(srcLabel + EDGE_SEPARATOR + dstLabel)){
             createEdge(srcLabel, dstLabel);
         }else{
             System.out.println("Edge already exist from " + srcLabel + " to " + dstLabel + "!");
@@ -81,7 +83,7 @@ public class Graph {
     }
 
     public boolean containsEdge(String src, String dst) {
-        return edges.containsKey(src + "->" + dst);
+        return edges.containsKey(src + EDGE_SEPARATOR + dst);
     }
 
     public void removeNode(String nodeName){
@@ -91,7 +93,7 @@ public class Graph {
             List<String> edgesToBeRemoved = edges.values().stream()
                     .filter(edge -> edge.getSource().toString().equals(finalNodeName)
                             || edge.getDestination().toString().equals(finalNodeName))
-                    .map(edge -> (edge.getSource() + "->" + edge.getDestination()))
+                    .map(edge -> (edge.getSource() + EDGE_SEPARATOR + edge.getDestination()))
                     .collect(Collectors.toList());
             edgesToBeRemoved.forEach(each -> edges.remove(each));
         }
@@ -109,7 +111,7 @@ public class Graph {
     public void removeEdge(String srcLabel, String dstLabel) {
         srcLabel = srcLabel.trim();
         dstLabel = dstLabel.trim();
-        String edgeKey = srcLabel + "->" + dstLabel;
+        String edgeKey = srcLabel + EDGE_SEPARATOR + dstLabel;
         if (edges.containsKey(edgeKey)) {
             edges.remove(edgeKey);
         } else {
@@ -187,20 +189,15 @@ public class Graph {
             if (current.equals(destination)) {
                 return true;
             } else {
-                exploreNeighborsDFS(current, destination, edgeMapping, path, visitedNodes);
+                List<Node> possibleDestinations = edgeMapping.getOrDefault(current, new LinkedList<>());
+                for (Node eachDestination : possibleDestinations) {
+                    if (searchDestDFS(eachDestination.toString(), destination, edgeMapping, path, visitedNodes)) {
+                        return true;
+                    }
+                }
             }
             path.delLastNode();
             return false;
-        }
-    }
-
-    private void exploreNeighborsDFS(String current, String destination, Map<String, List<Node>> edgeMapping,
-                                     Path path, Set<String> visitedNodes) {
-        List<Node> possibleDestinations = edgeMapping.getOrDefault(current, new LinkedList<>());
-        for (Node eachDestination : possibleDestinations) {
-            if (searchDestDFS(eachDestination.toString(), destination, edgeMapping, path, visitedNodes)) {
-                break;
-            }
         }
     }
   
@@ -231,5 +228,5 @@ public class Graph {
     }
 
 }
-//extract method on searchDestDFS
+//extract variable on "->"
 //extract method on findPathUsingBFS
