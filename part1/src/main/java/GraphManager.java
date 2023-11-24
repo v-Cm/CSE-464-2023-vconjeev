@@ -109,13 +109,13 @@ public class GraphManager {
         graph.removeEdge(srcLabel, dstLabel);
     }
 
-    public Path GraphSearch(Node src, Node dst, Algorithm algo) {
+    public Path GraphSearch(String src, String dst, Algorithm algo) {
         GraphSearchStrategy strategy = switch (algo) {
             case BFS -> new BFSStrategy();
             case DFS -> new DFSStrategy();
             default -> null;
         };
 
-        return (strategy != null) ? strategy.search(graph, src, dst) : null;
+        return (strategy != null) ? strategy.search(graph, new Node(src), new Node(dst)) : null;
     }
 }

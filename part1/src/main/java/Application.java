@@ -46,7 +46,7 @@ public class Application {
     }
 
     private static void performGraphSearch(GraphManager graphManager, Node source, Node destination, Algorithm algorithm) {
-        Path path = graphManager.GraphSearch(source, destination, algorithm);
+        Path path = graphManager.GraphSearch(source.toString(), destination.toString(), algorithm);
         System.out.println(path != null ? "The path:" + path : "No path exists.");
     }
 
