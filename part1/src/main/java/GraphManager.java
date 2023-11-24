@@ -110,11 +110,12 @@ public class GraphManager {
     }
 
     public Path GraphSearch(Node src, Node dst, Algorithm algo) {
-        if(algo == Algorithm.BFS)
-            return graph.findPathUsingBFS(src, dst);
-        else if (algo == Algorithm.DFS)
-            return graph.findPathUsingDFS(src, dst);
-        else
-            return null;
+        GraphSearchStrategy strategy = switch (algo) {
+            case BFS -> new BFSStrategy();
+            case DFS -> new DFSStrategy();
+            default -> null;
+        };
+
+        return (strategy != null) ? strategy.search(graph, src, dst) : null;
     }
 }

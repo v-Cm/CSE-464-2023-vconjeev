@@ -145,6 +145,7 @@ public class Graph {
         bfs.edgeMapping = getEdgeMapping();
         return bfs.search(sourceNode.toString(), destinationNode.toString());
     }
+
     private boolean areValidNodes(Node... nodes) {
         for (Node node : nodes) {
             if (!this.nodes.containsKey(node.toString())){
@@ -154,7 +155,7 @@ public class Graph {
         return true;
     }
   
-    private Map<String, List<Node>> getEdgeMapping() {
+    public Map<String, List<Node>> getEdgeMapping() {
         Map<String, List<Node>> edgeMapping = new HashMap<>();
         if (!edges.values().isEmpty()){
             for (Edge eachEdge : edges.values()) {
