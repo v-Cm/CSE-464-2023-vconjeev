@@ -113,6 +113,7 @@ public class GraphManager {
         GraphSearchStrategy strategy = switch (algo) {
             case BFS -> new BFSStrategy();
             case DFS -> new DFSStrategy();
+            case RANDOMWALK -> new RandomWalkStrategy();
             default -> null;
         };
 

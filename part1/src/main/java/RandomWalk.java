@@ -1,15 +1,20 @@
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
-public class DFS extends GraphSearchTemplate {
+public class RandomWalk extends GraphSearchTemplate {
+
     @Override
     protected void exploreNeighbors(String current, Node destinationNode) {
         if (destinationFound) {
             return;
         }
 
+        System.out.println("Current Path: " + createPath(current));
+
         List<Node> neighbors = edgeMapping.get(current);
         if (neighbors != null) {
+            // select random neighbor
+            Collections.shuffle(neighbors);
+
             for (Node neighbor : neighbors) {
                 String neighborString = neighbor.toString();
                 if (!visitedNodes.contains(neighborString)) {
@@ -20,6 +25,7 @@ public class DFS extends GraphSearchTemplate {
                         break;
                     }
 
+                    visitedNodes.add(neighborString);
                     exploreNeighbors(neighborString, destinationNode);
                 }
             }

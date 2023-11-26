@@ -13,7 +13,9 @@ import java.awt.image.BufferedImage;
 
 public class GraphManagerTest {
     static GraphManager graphManager;
+    static GraphManager graphManager1;
     private static String TEST_FILE_NAME = "testInput.dot";
+    private static String TEST_RW_FILE = "input2.dot";
     public static final String EXPECTED_TO_STRING = "Number of Nodes: 3\n" +
             "Label of Nodes: [A, B, C]\n" +
             "Number of Edges: 3\n" +
@@ -196,5 +198,17 @@ public class GraphManagerTest {
         Assert.assertNull(graphManager.GraphSearch("P", "B", Algorithm.DFS));
         Assert.assertNull(graphManager.GraphSearch("R", "S", Algorithm.DFS));
         Assert.assertNull(graphManager.GraphSearch("B", "A", Algorithm.INVALID));
+    }
+
+    @Before
+    public void setUp2() throws IOException {
+        graphManager1 = new GraphManager();
+        graphManager1.parseGraph(TEST_RW_FILE);
+    }
+
+    @Test
+    public void testGraphSearchRandomWalk(){
+        Assert.assertEquals("a -> b -> c", graphManager1.GraphSearch("a", "c", Algorithm.RANDOMWALK).toString());
+        Assert.assertNull(graphManager1.GraphSearch("h", "a", Algorithm.RANDOMWALK));
     }
 }

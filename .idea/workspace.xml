@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="Implement strategy pattern on BFS and DFS">
+    <list default="true" id="b1e58c59-0758-4f4b-8a99-a6b5efa63d0e" name="Changes" comment="Changed parameter type of GraphSearch to String">
+      <change afterPath="$PROJECT_DIR$/part1/input2.dot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part1/src/main/java/RandomWalk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/part1/src/main/java/RandomWalkStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/src/main/java/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/Algorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/src/main/java/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/DFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/src/main/java/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/src/main/java/GraphManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/GraphManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/src/main/java/GraphSearchTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/src/main/java/GraphSearchTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/classes/Algorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/Algorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/classes/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/classes/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/Graph.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/target/classes/GraphManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/classes/GraphManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/part1/target/test-classes/GraphManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/part1/target/test-classes/GraphManagerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/part1/test/GraphManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/part1/test/GraphManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +73,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.GraphManagerTest.testGraphSearchRandomWalk">
     <configuration name="GraphManagerTest.testGraphSearchBFS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cse-464-project" />
       <option name="PACKAGE_NAME" value="" />
@@ -84,8 +94,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GraphManagerTest.testGraphSearchRandomWalk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cse-464-project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GraphManagerTest" />
+      <option name="METHOD_NAME" value="testGraphSearchRandomWalk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GraphManagerTest.testGraphSearchRandomWalk" />
         <item itemvalue="JUnit.GraphManagerTest.testGraphSearchBFS" />
         <item itemvalue="JUnit.GraphManagerTest.testGraphSearchDFS" />
       </list>
@@ -196,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700802842153</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Changed parameter type of GraphSearch to String">
+      <option name="closed" value="true" />
+      <created>1700803464945</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700803464945</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -211,6 +240,7 @@
     <MESSAGE value="extract variable on Graph.java" />
     <MESSAGE value="Implement template pattern on BFS and DFS" />
     <MESSAGE value="Implement strategy pattern on BFS and DFS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement strategy pattern on BFS and DFS" />
+    <MESSAGE value="Changed parameter type of GraphSearch to String" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed parameter type of GraphSearch to String" />
   </component>
 </project>

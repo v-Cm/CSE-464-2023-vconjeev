@@ -125,35 +125,6 @@ public class Graph {
 
         }
     }
-
-    public Path findPathUsingDFS(Node sourceNode, Node destinationNode) {
-        if (!areValidNodes(sourceNode, destinationNode)) {
-            return null;
-        }
-
-        DFS dfs = new DFS();
-        dfs.edgeMapping = getEdgeMapping();
-        return dfs.search(sourceNode.toString(), destinationNode.toString());
-    }
-
-    public Path findPathUsingBFS(Node sourceNode, Node destinationNode) {
-        if (!areValidNodes(sourceNode, destinationNode)) {
-            return null;
-        }
-
-        BFS bfs = new BFS();
-        bfs.edgeMapping = getEdgeMapping();
-        return bfs.search(sourceNode.toString(), destinationNode.toString());
-    }
-
-    private boolean areValidNodes(Node... nodes) {
-        for (Node node : nodes) {
-            if (!this.nodes.containsKey(node.toString())){
-                return false;
-            }
-        }
-        return true;
-    }
   
     public Map<String, List<Node>> getEdgeMapping() {
         Map<String, List<Node>> edgeMapping = new HashMap<>();

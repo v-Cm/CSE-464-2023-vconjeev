@@ -6,6 +6,8 @@ public abstract class GraphSearchTemplate {
     protected Map<String, String> parentMapping;
     protected Queue<String> nodeQueue;
 
+    boolean destinationFound = false;
+
     public GraphSearchTemplate() {
         edgeMapping = new HashMap<>();
         visitedNodes = new HashSet<>();
@@ -29,6 +31,10 @@ public abstract class GraphSearchTemplate {
                 }
 
                 exploreNeighbors(current, new Node(destinationNode));
+
+                if(destinationFound){
+                    break;
+                }
             }
         }
 
