@@ -110,13 +110,15 @@ public class GraphManager {
     }
 
     public Path GraphSearch(String src, String dst, Algorithm algo) {
-        GraphSearchStrategy strategy = switch (algo) {
+        GraphSearchContext context = new GraphSearchContext();
+
+        context.setStrategy(switch (algo) {
             case BFS -> new BFSStrategy();
             case DFS -> new DFSStrategy();
             case RANDOMWALK -> new RandomWalkStrategy();
             default -> null;
-        };
+        });
 
-        return (strategy != null) ? strategy.search(graph, new Node(src), new Node(dst)) : null;
+        return context.executeSearch(graph, new Node(src), new Node(dst));
     }
 }
