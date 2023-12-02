@@ -21,6 +21,9 @@ public class Path {
         nodesInPath.addFirst(node);
     }
 
+    public boolean isEmpty() {
+        return nodesInPath.isEmpty();
+    }
     @Override
     public String toString() {
         return nodesInPath.stream()
